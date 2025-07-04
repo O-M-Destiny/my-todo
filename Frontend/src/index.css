@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: antiquewhite;
+  font-family: Arial, sans-serif;
+}
+
+.Home-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.Home-page .buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn {
+  margin-right: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  background-color: green;
+  color: aliceblue;
+}
+
+/* Center the login box */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bigger, elegant box */
+.login-form {
+  width: 500px;
+  max-width: 90%;
+  padding: 50px 40px;
+  background: white;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.login-form:hover {
+  transform: scale(1.01);
+}
+
+/* Input styling */
+.login-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Button styling */
+.login-form button {
+  width: 100%;
+  padding: 14px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+  background: #0056b3;
+}
+
+
+.reg-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reg-form {
+  width: 500px;
+  max-width: 90%;
+  padding: 50px 40px;
+  background: white;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+
+.reg-form:hover {
+  transform: scale(1.01);
+}
+
+/* Input styling */
+.reg-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Button styling */
+.reg-form button {
+  width: 100%;
+  padding: 14px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.reg-form button:hover {
+  background: #0056b3;
+}
+
+
+/* In your CSS file */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Full viewport height */
+  min-height: 100vh;
+  text-align: center;
+  
+  
+}
+
+
+.dashboard ul {
+  padding-left: 20px;
+}
+
+.dashboard li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+
+.inner-dashboard {
+  border: 1px solid rgb(97, 97, 240);
+  padding: 50px;
+  background: rgb(42, 41, 41);
+  color: #ccc;
+  border-radius: 20px;
+}
+
+.add-task {
+  margin: 25px;
+}
+
+.add-task input {
+  height: 40px;
+  border-radius: 10px;
+  padding-right: 12px;
+  margin-right: 10px;
+  border: 0;
+  outline: 0;
+}
+
+.add-task button {
+  background-color: #007bff;
+  color: #ccc;
+  border-radius: 10px;
+  width: 70px;
+  height: 40px;
+  border: 0;
+  cursor: pointer;
+}
+
+
+.add-desc {
+  margin-top: 20px;
+  transition: 0.3s ease;
+
+}
+
+ul {
+  list-style: none;
+}
+
+.welcome-user {
+  margin: 10px 0;
+}
+
+@media (max-width: 789px) {
+    .add-task button {
+      margin-top: 10px;
+    }
+}
