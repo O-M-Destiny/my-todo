@@ -48,7 +48,7 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
             raise HTTPException(status_code=409, detail=f"User already exists with the email {user.email}")
         new_user = User(
             username = user.username,
-            email = user.email,
+            email = user.email.strip(),
             hashed_password = hash_password(user.hashed_password)
         )
         db.add(new_user)
@@ -71,7 +71,9 @@ async def login(
     form: OAuth2PasswordRequestForm = Depends(),
     db: Session = Depends(get_db)
 ):
-    user = db.query(User).filter(User.email == form.username).first()
+    normalized_email = form.username.strip().lower()  
+    user = db.query(User).filter(User.email == normalized_email).first()
+
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
 
@@ -86,6 +88,7 @@ async def login(
         return {"access_token": access_token, "token_type": "bearer"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Token generation error: {str(e)}")
+
 
 
 
