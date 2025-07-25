@@ -8,14 +8,3 @@ ALGORITHM= os.getenv("ALGORITHM")
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES"))
 DEBUG = os.getenv("DEBUG")
 DATABASE_URL = os.getenv("DATABASE_URL")
-
-
-
-""""
-{
-  "username": "Jay dee",
-  "email": "Jaydee@samsun.dev",
-  "hashed_password": "Xyz12345"
-}
-
-"""
