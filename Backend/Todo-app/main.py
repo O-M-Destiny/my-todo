@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from auth import todo_router
 from database import Base, engine
-from models import User, Todo  # 👈 THIS IS IMPORTANT: import models BEFORE create_all
+from models import User, Todo 
 from fastapi.middleware.cors import CORSMiddleware
 
 Base.metadata.create_all(bind=engine)
@@ -15,9 +15,6 @@ app.add_middleware(
     allow_methods = ["*"],
     allow_headers = ["*"]
 )
-
-
-
 
 app.include_router(todo_router)
 

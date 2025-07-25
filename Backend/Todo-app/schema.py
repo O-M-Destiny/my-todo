@@ -11,7 +11,7 @@ class UserOut(UserCreate):
     id: int
 
     class Config:
-        from_attributes = True
+        orm_mode = True
 
 
 # Todo Schema
@@ -27,4 +27,4 @@ class TodoOut(TodoCreate):
     id: int
     
     class Config:
-        from_attributes = True
+        orm_mode = True
