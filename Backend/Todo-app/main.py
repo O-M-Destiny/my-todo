@@ -6,18 +6,12 @@ from fastapi.middleware.cors import CORSMiddleware
 
 Base.metadata.create_all(bind=engine)
 
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-frontend_url = os.getenv("frontend_url")
 
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = [frontend_url, "http://localhost:5173"],
+    allow_origins = ["https://my-todo-cko1.vercel.app", "http://localhost:5173"],
     allow_credentials = True,
     allow_methods = ["*"],
     allow_headers = ["*"]
