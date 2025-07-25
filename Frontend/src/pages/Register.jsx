@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 
 const Register = () => {
 
@@ -14,7 +16,7 @@ const Register = () => {
     const submitInfo = async (e)=> {
         e.preventDefault();
         try{
-            const response = await fetch("http://127.0.0.1:8000/register",
+            const response = await fetch(`${BASE_URL}/register`,
                 {
                     method: "POST",
                     headers: {"Content-Type": "application/json"},
@@ -40,10 +42,6 @@ const Register = () => {
             alert("Error " +error)
         }
     }
-
-    
-
-
 
   return (
     <div className='reg-container'>
