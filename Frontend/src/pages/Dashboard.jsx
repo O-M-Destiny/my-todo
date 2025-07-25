@@ -12,7 +12,7 @@ const Dashboard = () => {
   const [profileName, setProfileName] = useState("");
   const [newTodo, setNewTodo] = useState("");
   const [description, setDescription] = useState("");
-  const [loading, setLoading] = useState(true); // ✅ loading state
+  const [loading, setLoading] = useState(true); //  loading state
 
   const fetchTodos = async () => {
     try {
@@ -46,7 +46,7 @@ const Dashboard = () => {
     } catch (error) {
       console.error('Network error fetching todos:', error);
     } finally {
-      setLoading(false); // ✅ mark loading complete
+      setLoading(false); //  mark loading complete
     }
   };
 
